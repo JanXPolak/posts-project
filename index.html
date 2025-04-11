@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <p id="header-title">PostApp</p>
+    <br><br>
+    </header>
+    <div id="buttons">
+      <button id="add-post-ref" class="button-64" role="button"><span class="text">Dodaj post</span></button>
+      <!-- <button class="button" id="edit-post-ref"> Edit post </button> -->
+    </div>
+    <br><br><br><br><br><br>
+    <form class="add-post-form-ref hidden">
+      <label for="title">Podaj tytul:</label><br>
+      <input type="text" id="title" name="title" placeholder="Przykładowy tytuł" class="title-input-ref"><br>
+      <p class="error-message title-error-ref hidden">Niepoprawny tytuł</p>
+      <label for="description">Podaj opis:</label><br>
+      <input type="text" id="description" name="description" placeholder="Przykładowy opis" class="desc-input-ref">
+      <p class="error-message desc-error-ref hidden">Niepoprawny opis</p>
+      <input type="submit" value="Dodaj">
+    </form>
+    <form class="edit-post-form-ref hidden">
+      <label for="id">Podaj id postu:</label><br>
+      <input type="text" id="id" name="id" placeholder="Id postu" class="id-input-ref" disabled><br>
+      <p class="error-message id-error-ref hidden">Niepoprawne id</p>
+      <label for="title">Podaj tytuł postu:</label><br>
+      <input type="text" id="title" name="title" placeholder="Tytuł postu" class="title-input-ref"><br>
+      <p class="error-message title-error-ref hidden">Niepoprawny tytuł</p>
+      <label for="description">Podaj opis postu:</label><br>
+      <input type="text" id="description" name="description" placeholder="Opis postu" class="desc-input-ref"><br>
+      <p class="error-message desc-error-ref hidden">Niepoprawny opis</p>
+      <input type="submit" value="Zatwierdź">
+      <button class="close-form-ref" type="button">Anuluj</button>
+    </form>
+    <form class="category-form-ref">
+        <fieldset>
+          <legend>Wybierz metodę sortowania postów:</legend>
+          <div>
+            <input type="radio" id="food" name="category" value="food" />
+            <label for="food">Food</label>
+            <input type="radio" id="sport" name="category" value="sport" />
+            <label for="sport">Sport</label>
+            <input type="radio" id="movies" name="category" value="movies" />
+            <label for="movies">Movies</label>
+            <input type="radio" id="none" name="category" value="none" checked />
+            <label for="none">None</label>
+          </div>
+          <div>
+            <button type="submit">Change</button>
+          </div>
+        </fieldset>
+      </form>
+      <pre id="log"></pre>
+    <div id="main-div-ref">
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
