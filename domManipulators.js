@@ -1,6 +1,6 @@
 import { getPostsFromGivenCategory} from "./utils.js";
 
-import {deleteButtonAction, editPostAction, addPostFormAction} from "./postsService.js"
+import {deleteButtonAction, addPostFormAction} from "./postsService.js"
 
 // ------------------------------------------------------------------------
 
@@ -116,7 +116,6 @@ function showPostsFromGivenCategory(postData, category) {
     postBorder.textContent = "------------------------";
     postBorder2.textContent = "------------------------";
 
-    // TODO: GOTOWE przerobic na jedno zrodlo prawdy
     const divPost = document.createElement("div");
     setPostIdOnElement(divPost,post.id)
     mainDiv.appendChild(divPost);
@@ -129,7 +128,6 @@ function showPostsFromGivenCategory(postData, category) {
 // ------------------------------------------------------------------------
 
 export function loadForm(postData) {
-  // wzięte z https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio
   const form = document.querySelector(".category-form-ref");
   const log = document.querySelector("#log");
   form.addEventListener(
